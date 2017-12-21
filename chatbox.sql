@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2017 at 01:39 PM
+-- Generation Time: Dec 21, 2017 at 01:48 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -49,10 +49,17 @@ INSERT INTO `chat` (`chating`) VALUES
 
 CREATE TABLE `groups` (
   `Group_Id` int(11) NOT NULL,
-  `Id1` int(11) NOT NULL,
-  `Id2` int(11) NOT NULL,
-  `Id3` int(11) NOT NULL
+  `Id1` int(11) DEFAULT NULL,
+  `Id2` int(11) DEFAULT NULL,
+  `Id3` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO `groups` (`Group_Id`, `Id1`, `Id2`, `Id3`) VALUES
+(1, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
