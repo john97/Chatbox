@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2017 at 11:49 PM
+-- Generation Time: Dec 21, 2017 at 01:09 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -35,71 +35,36 @@ CREATE TABLE `chat` (
 --
 
 INSERT INTO `chat` (`chating`) VALUES
-('Keshav Goyal:klns'),
-('Keshav Goyal:;;kjs'),
-('Keshav Goyal:lknls'),
-('Keshav Goyal:j;scvskv'),
-('Keshav Goyal:lkml;m'),
-('keshav:geehhe'),
-('Keshav Goyal:hhlhlhjk'),
-('Keshav Goyal:lm;m'),
-('Keshav Goyal:lknwkln'),
-('Keshav Goyal:knlkn'),
-('Keshav Goyal:jknjn'),
-('Keshav Goyal:rssdg'),
-('Keshav Goyal:lmsvd'),
-('Keshav Goyal:.ksndv'),
-('Keshav Goyal:;sdmv'),
-('Keshav Goyal:sdvd'),
-('Keshav Goyal:rf'),
-('Keshav Goyal:;kmdv'),
-('Keshav Goyal:<h1>k dv<h1>'),
-('Keshav Goyal:kkn'),
-('Keshav Goyal:</h1>'),
-('Keshav Goyal:m sdc'),
-('Keshav Goyal:lnevnke'),
-('Keshav Goyal:;emv'),
-('Keshav Goyal: .,d v'),
-('Keshav Goyal:klnerf'),
-('Keshav Goyal:;lmlm'),
-('Keshav Goyal:;kmlm'),
-('keshav:l;l;eve'),
-('Keshav Goyal:knklh'),
-('Keshav Goyal:xbx'),
-('keshav:l;mdfv'),
-('Keshav Goyal:lw;nvrev'),
-('keshav:lw;eofjwe;f'),
-('keshav:lnekca'),
-('keshav:lnw;nfewf'),
-('keshav:lhlh'),
-('keshav:lnn'),
-('Keshav Goyal:;km;s'),
-('keshav:lmlmlwm'),
-('keshav:;l l;l;l l'),
-('keshav:;knkn'),
-('keshav:;ll l;'),
-('keshav:omninopnpon'),
-('Keshav Goyal:;mlml;m;lm'),
-('keshav:m;lml;m'),
-('Keshav Goyal:l;mlm'),
-('Keshav Goyal:k;n;ln'),
-('Keshav Goyal:lkefnf'),
-('Keshav Goyal:fuckoff'),
-('Keshav Goyal:m;m;lm;s'),
-('Keshav Goyal:;m;lms'),
-('Keshav Goyal:knksn'),
-('keshav:kklknnlna'),
-('keshav:'),
-('keshav:.,m.mw,.'),
-('keshav://,m.'),
-('keshav:wlmlm'),
-('keshav:,., w'),
-('Keshav Goyal:x x c'),
-('Keshav Goyal:x sd'),
-('keshav:m .s '),
-('keshav:;m;mlms'),
-('keshav:l;m;m;ms'),
-('keshav:kllklks');
+('keshav:jnksnjbs'),
+('keshav:slnljns'),
+('Keshav Goyal:krlnkve'),
+('Keshav Goyal:kner'),
+('keshav:hbsjdh');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Group`
+--
+
+CREATE TABLE `Group` (
+  `Group Id` int(11) NOT NULL,
+  `Id1` int(11) NOT NULL,
+  `Id2` int(11) NOT NULL,
+  `Id3` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Group_Info`
+--
+
+CREATE TABLE `Group_Info` (
+  `Group Id` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `No_of_members` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -119,14 +84,26 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `id`, `name`) VALUES
-('ja@gmail.com', '9d9e6c4af47f59af2e5dd0a2a0c0922d', 3, 'ja'),
-('rohit@gmail.com', '6d20a2e5c2a45119a36606c271dd4be7', 4, 'rohit'),
-('cse150001014@iiti.ac.in', '1968904759877153bcd917f559d4be94', 6, 'Keshav Goyal'),
-('johndecent06@gmail.com', '1968904759877153bcd917f559d4be94', 7, 'keshav');
+('cse150001014@iiti.ac.in', '08a1de66c3648a7263b5565dbefe1ab5', 2, 'Keshav Goyal'),
+('johndecent06@gmail.com', '1968904759877153bcd917f559d4be94', 5, 'keshav');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `Group`
+--
+ALTER TABLE `Group`
+  ADD PRIMARY KEY (`Group Id`),
+  ADD UNIQUE KEY `Group Id` (`Group Id`);
+
+--
+-- Indexes for table `Group_Info`
+--
+ALTER TABLE `Group_Info`
+  ADD PRIMARY KEY (`Group Id`),
+  ADD UNIQUE KEY `Group Id` (`Group Id`);
 
 --
 -- Indexes for table `user`
@@ -142,7 +119,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
