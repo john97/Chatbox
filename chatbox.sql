@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2017 at 01:09 PM
+-- Generation Time: Dec 21, 2017 at 01:22 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -66,6 +66,15 @@ CREATE TABLE `Group_Info` (
   `No_of_members` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `Group_Info`
+--
+
+INSERT INTO `Group_Info` (`Group Id`, `Name`, `No_of_members`) VALUES
+(1, 'jnks', 2),
+(2, 'svfv', 2),
+(3, 'vwrv', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +124,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `Group_Info`
+--
+ALTER TABLE `Group_Info`
+  MODIFY `Group Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
