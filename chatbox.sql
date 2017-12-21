@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2017 at 01:48 PM
+-- Generation Time: Dec 21, 2017 at 03:06 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -59,7 +59,7 @@ CREATE TABLE `groups` (
 --
 
 INSERT INTO `groups` (`Group_Id`, `Id1`, `Id2`, `Id3`) VALUES
-(1, 5, NULL, NULL);
+(2, 2, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -112,7 +112,10 @@ INSERT INTO `user` (`username`, `password`, `id`, `name`) VALUES
 --
 ALTER TABLE `groups`
   ADD PRIMARY KEY (`Group_Id`),
-  ADD UNIQUE KEY `Group Id` (`Group_Id`);
+  ADD UNIQUE KEY `Group Id` (`Group_Id`),
+  ADD KEY `groups_ibfk_2` (`Id2`),
+  ADD KEY `groups_ibfk_1` (`Id1`),
+  ADD KEY `foreign_id3` (`Id3`);
 
 --
 -- Indexes for table `Group_Info`
@@ -149,7 +152,10 @@ ALTER TABLE `user`
 -- Constraints for table `groups`
 --
 ALTER TABLE `groups`
-  ADD CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`Group_Id`) REFERENCES `Group_Info` (`Group_Id`);
+  ADD CONSTRAINT `groups_ibfk` FOREIGN KEY (`Group_Id`) REFERENCES `Group_Info` (`Group_Id`),
+  ADD CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`Id1`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `groups_ibfk_2` FOREIGN KEY (`Id2`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `groups_ibfk_3` FOREIGN KEY (`Id3`) REFERENCES `user` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
